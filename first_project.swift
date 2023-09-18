@@ -1,24 +1,12 @@
 import Foundation
 
-let http404 = (404, "not found")
-let (statusCode, statusMessage) = http404
+let firstName = "Steve"
+var lastName: String? = "Jobs"
 
-let (justTheStatusCode) = http404
+if lastName == nil { lastName = String("Wozniak")}
 
-let http200 = (statusCode: 200, message: "OK")
+print("\(firstName) \(lastName)")
 
-let possibleNumber = "123"
-let convertedNumber = Int(possibleNumber)
-print(convertedNumber)
-
-if convertedNumber != nil {
-    print("convertedNumber: \(convertedNumber)")
+if let unwrappedValue = lastName {
+	print("\(firstName) \(unwrappedValue)") 
 }
-
-
-let possibleString: String? = "aaa"
-let forcedString: String = possibleString!
-let assumedString: String! = "isso é uma string assumida"
-let implicitString: String = assumedString
-
-print(forcedString, implicitString)
